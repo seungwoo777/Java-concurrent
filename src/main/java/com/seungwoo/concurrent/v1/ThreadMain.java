@@ -1,18 +1,17 @@
-package com.seungwoo.concurrent.javaV1;
+package com.seungwoo.concurrent.v1;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class ThreadMain {
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         start();
         run();
     }
 
     private static void run() {
         Thread thread = new Thread();
-
         thread.run();
         thread.run();
         thread.run();
@@ -34,4 +33,5 @@ public class ThreadMain {
             log.info("myThread -> {}", Thread.currentThread().getName());
         }
     }
+
 }
